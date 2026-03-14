@@ -7,16 +7,22 @@
 
 ## Project Structure
 ```
-index.html          — Main page
-CNAME               — Custom domain config
-CLAUDE.md           — Agent instructions
-.github/workflows/  — GitHub Actions deploy pipeline
+index.html              — Main page (links all stylesheets)
+styles/variables.css    — CSS custom properties (colors, fonts, spacing)
+styles/base.css         — Reset, element defaults, responsive font sizing
+styles/layout.css       — Section containers, grid, responsive structure
+CNAME                   — Custom domain config
+CLAUDE.md               — Agent instructions
+.github/workflows/      — GitHub Actions deploy pipeline
 ```
 
 ## Design System
-- Colors: golds (#C9A84C, #8B6914), purples (#7D5A8A), cream (#FFF8F0), earth (#4A3728, #6B5344)
-- Typography: Georgia, Times New Roman (serif)
-- Tone: warm, spiritual, accessible to older readers
+- CSS custom properties in `styles/variables.css` — use `var(--color-gold)` etc.
+- Colors: gold (#D4A853), amber (#C4843A), purple (#8B7B9E), mauve (#B5A0B5), cream (#F5F0E8), earth (#3A2E2A), text (#2C2420)
+- Headings: Cormorant Garamond (Google Fonts), fallback Georgia
+- Body: Source Sans 3 (Google Fonts), fallback system sans-serif
+- Spacing: 4px base unit via `--space-N` tokens
+- Layout: `.container`, `.section`, `.grid--2`, `.grid--3` classes available
 
 ## Commands
 - No build/test/lint commands — static site
