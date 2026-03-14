@@ -26,4 +26,6 @@ CLAUDE.md           — Agent instructions
 ## Gotchas
 - CNAME file must exist for custom domain; GitHub Pages needs it
 - The deploy workflow uses actions/deploy-pages@v4 which requires Pages to be enabled in repo settings (Settings > Pages > Source: GitHub Actions)
+- Pages was enabled via API: `gh api repos/Gilbetrar/seed-thoughts-site/pages -X POST -f build_type=workflow`
+- Deployed site URL: https://gilbetrar.github.io/seed-thoughts-site/
 - No npm/node — don't try to run npm commands; they will fail

@@ -17,6 +17,14 @@
 - GitHub Pages deployment uses the newer actions/deploy-pages@v4 approach (not the legacy gh-pages branch)
 - The deploy workflow needs Pages enabled in repo settings with source set to "GitHub Actions"
 
+**Mistakes made:**
+- Initial CI failed because GitHub Pages wasn't enabled on the repo. Fixed by enabling via API: `gh api repos/Gilbetrar/seed-thoughts-site/pages -X POST -f build_type=workflow`, then re-ran the workflow.
+
 **Codebase facts discovered:**
 - Empty repo at start — first commit creates everything
 - Remote is HTTPS (not SSH): https://github.com/Gilbetrar/seed-thoughts-site.git
+
+**Verification:**
+- HTTP 200 from https://gilbetrar.github.io/seed-thoughts-site/
+- Page content contains "Seed Thoughts" text
+- All acceptance criteria from issue #1 met
