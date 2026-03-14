@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Layout — Section containers, grid, and responsive structure
+   ========================================================================== */
+
+/* --- Section containers --- */
+.section {
+  padding: var(--space-16) var(--space-6);
+}
+
+.section--narrow {
+  max-width: var(--max-width-narrow);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Content wrapper (centers content, sets max-width) --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--max-width-narrow);
+}
+
+.container--text {
+  max-width: var(--max-width-text);
+}
+
+/* --- Simple responsive grid --- */
+.grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* --- Text alignment utilities --- */
+.text-center {
+  text-align: center;
+}
+
+/* --- Vertical spacing between sections --- */
+.section + .section {
+  border-top: 1px solid rgba(58, 46, 42, 0.08);
+}
+
+/* --- Responsive section padding --- */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) var(--space-4);
+  }
+}
+
+@media (max-width: 375px) {
+  .section {
+    padding: var(--space-8) var(--space-4);
+  }
+}

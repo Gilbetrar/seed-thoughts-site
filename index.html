@@ -4,64 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seed Thoughts & Synchronicity</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background-color: #FFF8F0;
-            color: #4A3728;
+    <!-- Google Fonts: Cormorant Garamond (headings) + Source Sans 3 (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Design system stylesheets -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+
+    <!-- Page-specific styles (placeholder page) -->
+    <style>
+        .hero-placeholder {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             text-align: center;
-            padding: 2rem;
+            padding: var(--space-8);
         }
 
-        .container {
-            max-width: 600px;
+        .hero-placeholder h1 {
+            color: var(--color-gold);
+            margin-bottom: var(--space-2);
         }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #8B6914;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #7D5A8A;
+        .hero-placeholder .subtitle {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            color: var(--color-purple);
             font-style: italic;
-            margin-bottom: 2rem;
+            margin-bottom: var(--space-8);
         }
 
-        .coming-soon {
-            font-size: 1.1rem;
-            color: #6B5344;
-            letter-spacing: 0.1em;
+        .hero-placeholder .coming-soon {
+            font-size: var(--text-sm);
+            color: var(--color-text-light);
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-        }
-
-        .divider {
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(to right, #C9A84C, #7D5A8A);
-            margin: 1.5rem auto;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Seed Thoughts &amp; Synchronicity</h1>
-        <p class="subtitle">A Guide to Your Inner Wisdom</p>
-        <div class="divider"></div>
-        <p class="coming-soon">Coming Soon</p>
-    </div>
+    <main class="hero-placeholder">
+        <div class="container--text">
+            <h1>Seed Thoughts &amp; Synchronicity</h1>
+            <p class="subtitle">A Guide to Your Inner Wisdom</p>
+            <hr>
+            <p class="coming-soon">Coming Soon</p>
+        </div>
+    </main>
 </body>
 </html>
