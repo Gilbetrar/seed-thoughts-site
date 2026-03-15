@@ -14,7 +14,22 @@ styles/layout.css       — Section containers, grid, responsive structure
 CNAME                   — Custom domain config
 CLAUDE.md               — Agent instructions
 .github/workflows/      — GitHub Actions deploy pipeline
+styles/page.css         — Page-level component styles (nav, hero, sections)
+images/book-cover.jpg   — Book cover (927x1200, 194KB)
+images/book-cover-sm.jpg — Book cover small (464x600, 54KB)
 ```
+
+## Page Sections
+- Sticky nav with smooth-scroll anchor links (#book, #about, #contact)
+- Hero: book cover + title + CTA
+- Book: description + "Coming Soon" badge + genre tags
+- About: bio + botanical photo placeholder (awaiting author photo)
+- Contact: mailto link to jacksonjo@aol.com
+- Footer: copyright + attribution
+
+## Content Status
+- Bio and book description are PLACEHOLDER text, not Joan's exact email copy
+- Must be substituted with real content during Issue #6 (Joan Review)
 
 ## Design System
 - CSS custom properties in `styles/variables.css` — use `var(--color-gold)` etc.
@@ -35,3 +50,4 @@ CLAUDE.md               — Agent instructions
 - Pages was enabled via API: `gh api repos/Gilbetrar/seed-thoughts-site/pages -X POST -f build_type=workflow`
 - Deployed site URL: https://gilbetrar.github.io/seed-thoughts-site/
 - No npm/node — don't try to run npm commands; they will fail
+- ImageMagick PDF conversion needs Ghostscript (`gs`) — not installed. Use `qlmanage -t -s SIZE` + `sips` instead for PDF→image on macOS

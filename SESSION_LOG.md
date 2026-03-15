@@ -52,3 +52,30 @@
 **Codebase facts discovered:**
 - Styles now live in `styles/` directory with three files (variables, base, layout)
 - All colors and spacing available via CSS custom properties (e.g., `var(--color-gold)`, `var(--space-8)`)
+
+---
+
+## Agent Session - Issue #3
+
+**Worked on:** Issue #3 - Homepage Content — Hero, Book, About Joan, Contact
+
+**What I did:**
+- Converted book cover PDF to optimized JPG (194KB) and small version (54KB) using macOS `qlmanage` + `sips`
+- Created `styles/page.css` with all page-specific component styles (nav, hero, book, about, contact, footer)
+- Rebuilt `index.html` with full content: sticky nav, hero with book cover, book description with "Coming Soon" badge and genre tags, about Joan with botanical photo placeholder, contact with mailto link, footer
+- Added meta description for SEO
+- Responsive design tested at 375px (mobile) and 1200px (desktop)
+
+**What I learned:**
+- `magick` (ImageMagick) requires Ghostscript (`gs`) for PDF conversion — not installed on this system
+- macOS `qlmanage -t -s 1200` generates high-quality PNG thumbnails from PDFs, then `sips` converts to JPG
+- The `scroll-behavior: smooth` in base.css handles smooth scrolling for anchor links — no JS needed
+- Joan's exact bio/book description text was not available; used placeholder content based on issue hints. Will need substitution during Issue #6 review.
+
+**Mistakes made:**
+- Tried ImageMagick first for PDF conversion, which failed due to missing Ghostscript. Switched to macOS native tools.
+
+**Codebase facts discovered:**
+- New file: `styles/page.css` — all page-level component styles
+- New directory: `images/` — contains `book-cover.jpg` (194KB, 927x1200) and `book-cover-sm.jpg` (54KB, 464x600)
+- Content is placeholder text, not Joan's exact email copy — needs substitution in Issue #6
