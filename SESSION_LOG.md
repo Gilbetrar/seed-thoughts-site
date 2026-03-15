@@ -167,3 +167,33 @@
 
 **Codebase facts discovered:**
 - No new discoveries — project is in a waiting state
+
+---
+
+## Agent Session - Issue #6 (Iteration 7)
+
+**Worked on:** Issue #6 - Joan Review — Implement Feedback & Confirm
+
+**What I did:**
+- Found Joan's reply email via Gmail MCP (sent 2026-03-14, subject: "Joan's answers to your questions and Big Thanks!")
+- Replaced all placeholder book description text with Joan's own words (4 paragraphs about Seed Thoughts as sacred riddles)
+- Replaced all placeholder bio text with Joan's actual bio from the book (mystic/teacher/writer in Gold Country, Queen Anne farmhouse, career history, family)
+- Updated meta description to use Joan's language
+- Updated contact section copy to mention sharing Seed Thought creations (from Joan's vision)
+- Committed and pushed; CI passed
+- Created HANDOFF.md for two actions requiring human intervention:
+  1. Download book cover PDF attachment from Joan's email (Gmail MCP can't download attachments)
+  2. Send confirmation email to Joan with updated site link
+
+**What I learned:**
+- Gmail MCP can search and read email bodies but CANNOT download attachments — file downloads need human intervention
+- Joan's email was a response to the original questionnaire, not feedback on the preview screenshots
+- Joan has a broader vision for the site (blog, forum, store, scheduling) that maps to existing Phase 2/3 issues
+
+**Mistakes made:**
+- None
+
+**Codebase facts discovered:**
+- Joan's real content is now live — no more placeholder text
+- Book cover is still the old placeholder; real cover PDF needs manual download from email
+- Joan did not provide an author photo (left that question blank)
