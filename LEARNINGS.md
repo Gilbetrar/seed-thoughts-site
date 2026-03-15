@@ -30,8 +30,11 @@ images/*.webp           — WebP versions of all images (responsive -sm variants
 - Footer: copyright + attribution
 
 ## Content Status
-- Bio and book description are PLACEHOLDER text, not Joan's exact email copy
-- Must be substituted with real content during Issue #6 (Joan Review)
+- Bio and book description are Joan's real words (from her 2026-03-14 email), implemented in commit 6db066b
+- Book cover is Joan's real cover (converted from her PDF attachment)
+- Author photo not provided — tree/botanical image is a placeholder
+- Site shared with Joan via confirmation email (2026-03-14); waiting for her feedback
+- To check for feedback: search Gmail for `from:jacksonjo@aol.com` (any recent reply)
 
 ## Design System
 - CSS custom properties in `styles/variables.css` — use `var(--color-gold)` etc.
