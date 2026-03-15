@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Animations — Scroll reveal and hover effects
+   ========================================================================== */
+
+/* --- Fade-in on scroll --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children slightly when parent fades in */
+.fade-in--visible > *:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.fade-in--visible > *:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+/* --- Nav hover underline --- */
+.site-nav__links a {
+  position: relative;
+}
+
+.site-nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  transition: width var(--transition-speed) ease;
+}
+
+.site-nav__links a:hover::after {
+  width: 100%;
+}
+
+/* --- CTA button glow on hover --- */
+.hero__cta:hover {
+  box-shadow: 0 4px 20px rgba(212, 168, 83, 0.3);
+}
+
+/* --- Book tags hover lift --- */
+.book__tag {
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.book__tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 123, 158, 0.2);
+}
+
+/* --- Image hover --- */
+.about__tree-img,
+.book__image img {
+  transition: transform 0.5s ease;
+}
+
+.about__tree-img:hover,
+.book__image img:hover {
+  transform: scale(1.02);
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .site-nav__links a::after,
+  .hero__cta,
+  .book__tag,
+  .about__tree-img,
+  .book__image img {
+    transition: none;
+  }
+}

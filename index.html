@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body>
 
@@ -34,18 +35,24 @@
     <main>
         <!-- Hero Section -->
         <section class="hero" id="hero">
+            <div class="hero__bg" aria-hidden="true"></div>
             <div class="hero__inner">
-                <div class="hero__text">
+                <div class="hero__text fade-in">
                     <h1 class="hero__title">Seed Thoughts &amp; Synchronicity</h1>
                     <p class="hero__subtitle">A Guide to Your Inner Wisdom</p>
                     <p class="hero__author">by Joan Woods Jackson</p>
                     <a href="#book" class="hero__cta">Discover the Book</a>
                 </div>
-                <div class="hero__cover">
-                    <img src="images/book-cover.jpg"
-                         alt="Cover of Seed Thoughts and Synchronicity by Joan Woods Jackson — a painterly sunset scene with a figure walking a golden path toward mountains"
-                         width="380"
-                         height="492">
+                <div class="hero__cover fade-in">
+                    <picture>
+                        <source srcset="images/book-cover-sm.webp" media="(max-width: 768px)" type="image/webp">
+                        <source srcset="images/book-cover.webp" type="image/webp">
+                        <img src="images/book-cover.jpg"
+                             alt="Cover of Seed Thoughts and Synchronicity by Joan Woods Jackson — a painterly sunset scene with a figure walking a golden path toward mountains"
+                             width="380"
+                             height="492"
+                             loading="eager">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -53,23 +60,37 @@
         <!-- Book Section -->
         <section class="book section" id="book">
             <div class="container">
-                <div class="book__header">
+                <div class="book__header fade-in">
                     <span class="book__badge">Coming Soon</span>
                     <h2>About the Book</h2>
                     <div class="decorative-line"></div>
                 </div>
 
-                <div class="book__description">
-                    <p>This is a guide to help you access your own inner wisdom — the quiet knowing that lives beneath the noise of daily life. Through seed thoughts, reflections, and moments of synchronicity, Joan invites you to explore the deeper currents that shape your path.</p>
+                <div class="book__content fade-in">
+                    <div class="book__description">
+                        <p>This is a guide to help you access your own inner wisdom — the quiet knowing that lives beneath the noise of daily life. Through seed thoughts, reflections, and moments of synchronicity, Joan invites you to explore the deeper currents that shape your path.</p>
 
-                    <p>A seed thought is a small, potent idea planted in the fertile ground of your awareness. Given attention, it grows into insight, clarity, and sometimes transformation. This book offers a collection of such seeds — drawn from decades of contemplation, mystical experience, and the study of consciousness.</p>
+                        <p>A seed thought is a small, potent idea planted in the fertile ground of your awareness. Given attention, it grows into insight, clarity, and sometimes transformation. This book offers a collection of such seeds — drawn from decades of contemplation, mystical experience, and the study of consciousness.</p>
 
-                    <p>Part poetry, part meditation, part guidebook, <em>Seed Thoughts &amp; Synchronicity</em> is for anyone who senses there is more to life than meets the eye. It speaks to the seeker in all of us — the part that notices meaningful coincidences, follows intuitive nudges, and trusts the unfolding of a larger story.</p>
+                        <p>Part poetry, part meditation, part guidebook, <em>Seed Thoughts &amp; Synchronicity</em> is for anyone who senses there is more to life than meets the eye. It speaks to the seeker in all of us — the part that notices meaningful coincidences, follows intuitive nudges, and trusts the unfolding of a larger story.</p>
 
-                    <p>Whether you are new to the inner journey or have walked this path for years, these pages offer companionship, encouragement, and a reminder: your inner wisdom has been waiting for you all along.</p>
+                        <p>Whether you are new to the inner journey or have walked this path for years, these pages offer companionship, encouragement, and a reminder: your inner wisdom has been waiting for you all along.</p>
+                    </div>
+
+                    <div class="book__image">
+                        <picture>
+                            <source srcset="images/seedlings-sm.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="images/seedlings.webp" type="image/webp">
+                            <img src="images/seedlings.webp"
+                                 alt="Young seedlings sprouting from dark soil in small pots — new growth reaching toward the light"
+                                 width="800"
+                                 height="533"
+                                 loading="lazy">
+                        </picture>
+                    </div>
                 </div>
 
-                <div class="book__tags">
+                <div class="book__tags fade-in">
                     <span class="book__tag">Self-Help</span>
                     <span class="book__tag">Metaphysical</span>
                     <span class="book__tag">Poetry</span>
@@ -77,21 +98,35 @@
             </div>
         </section>
 
+        <!-- Section Divider -->
+        <div class="section-divider" aria-hidden="true">
+            <picture>
+                <source srcset="images/golden-field-sm.webp" media="(max-width: 768px)" type="image/webp">
+                <source srcset="images/golden-field.webp" type="image/webp">
+                <img src="images/golden-field.webp"
+                     alt=""
+                     width="1600"
+                     height="900"
+                     loading="lazy">
+            </picture>
+        </div>
+
         <!-- About Section -->
         <section class="about section" id="about">
             <div class="container">
-                <div class="about__inner">
+                <div class="about__inner fade-in">
                     <div class="about__photo">
-                        <div class="about__photo-placeholder" aria-hidden="true">
-                            <!-- Botanical decorative SVG -->
-                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M50 10 C50 10, 30 30, 30 50 C30 70, 50 90, 50 90 C50 90, 70 70, 70 50 C70 30, 50 10, 50 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                <line x1="50" y1="50" x2="50" y2="95" stroke="currentColor" stroke-width="1.5"/>
-                                <path d="M50 60 C50 60, 35 50, 30 40" stroke="currentColor" stroke-width="1" fill="none"/>
-                                <path d="M50 65 C50 65, 65 55, 70 45" stroke="currentColor" stroke-width="1" fill="none"/>
-                            </svg>
-                            <span>Author photo coming soon</span>
-                        </div>
+                        <picture>
+                            <source srcset="images/tree-sm.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="images/tree.webp" type="image/webp">
+                            <img src="images/tree.webp"
+                                 alt="A majestic solitary tree standing in a sunlit green field — reminiscent of the sycamore Joan writes about"
+                                 class="about__tree-img"
+                                 width="800"
+                                 height="534"
+                                 loading="lazy">
+                        </picture>
+                        <span class="about__photo-caption">Author photo coming soon</span>
                     </div>
                     <div class="about__content">
                         <h2>About Joan</h2>
@@ -111,7 +146,7 @@
 
         <!-- Contact Section -->
         <section class="contact section" id="contact">
-            <div class="container">
+            <div class="container fade-in">
                 <h2>Get in Touch</h2>
                 <div class="decorative-line"></div>
                 <p>Joan would love to hear from you — whether you have a question about the book, want to share your own experience with synchronicity, or simply want to say hello.</p>
@@ -123,7 +158,28 @@
     <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; 2026 Joan Woods Jackson. Website by Ben Bateman.</p>
+        <p class="site-footer__credits">Photos by <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
     </footer>
+
+    <!-- Scroll animations -->
+    <script>
+    (function() {
+        var targets = document.querySelectorAll('.fade-in');
+        if (!('IntersectionObserver' in window)) {
+            targets.forEach(function(el) { el.classList.add('fade-in--visible'); });
+            return;
+        }
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in--visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        targets.forEach(function(el) { observer.observe(el); });
+    })();
+    </script>
 
 </body>
 </html>
