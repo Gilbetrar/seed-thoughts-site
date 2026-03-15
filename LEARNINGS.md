@@ -15,8 +15,10 @@ CNAME                   — Custom domain config
 CLAUDE.md               — Agent instructions
 .github/workflows/      — GitHub Actions deploy pipeline
 styles/page.css         — Page-level component styles (nav, hero, sections)
+styles/animations.css   — Scroll reveal + hover animations
 images/book-cover.jpg   — Book cover (927x1200, 194KB)
 images/book-cover-sm.jpg — Book cover small (464x600, 54KB)
+images/*.webp           — WebP versions of all images (responsive -sm variants)
 ```
 
 ## Page Sections
@@ -44,6 +46,14 @@ images/book-cover-sm.jpg — Book cover small (464x600, 54KB)
 - Preview: open index.html in browser
 - Deploy: push to main
 
+## Image Pipeline
+- All images served as WebP with `<picture>` elements for fallback
+- Each image has two sizes: full (800-1200w) and small (-sm, 400-800w)
+- Use `cwebp -q 65 -resize WIDTH 0 input.jpg -o output.webp` for conversion
+- Keep all images under 200KB; reduce resolution before reducing quality
+- Unsplash CDN: `images.unsplash.com/photo-{ID}?w=WIDTH&q=QUALITY&auto=format`
+- Animations use IntersectionObserver with `.fade-in` class; `prefers-reduced-motion` respected
+
 ## Gotchas
 - CNAME file must exist for custom domain; GitHub Pages needs it
 - The deploy workflow uses actions/deploy-pages@v4 which requires Pages to be enabled in repo settings (Settings > Pages > Source: GitHub Actions)
@@ -51,3 +61,4 @@ images/book-cover-sm.jpg — Book cover small (464x600, 54KB)
 - Deployed site URL: https://gilbetrar.github.io/seed-thoughts-site/
 - No npm/node — don't try to run npm commands; they will fail
 - ImageMagick PDF conversion needs Ghostscript (`gs`) — not installed. Use `qlmanage -t -s SIZE` + `sips` instead for PDF→image on macOS
+- Unsplash is client-rendered — can't scrape with WebFetch. Use direct CDN URLs instead

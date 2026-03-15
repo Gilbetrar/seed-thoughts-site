@@ -79,3 +79,46 @@
 - New file: `styles/page.css` — all page-level component styles
 - New directory: `images/` — contains `book-cover.jpg` (194KB, 927x1200) and `book-cover-sm.jpg` (54KB, 464x600)
 - Content is placeholder text, not Joan's exact email copy — needs substitution in Issue #6
+
+---
+
+## Agent Session - Issue #4
+
+**Worked on:** Issue #4 - Stock Imagery + Visual Polish
+
+**What I did:**
+- Sourced 4 stock images from Unsplash CDN:
+  - Forest path with golden sunlight (hero background)
+  - Golden wheat field at sunset (section divider)
+  - Majestic solitary tree (about section — evokes Joan's sycamore)
+  - Seedlings sprouting from soil (book section — "seed thoughts" metaphor)
+- Converted all images to WebP using `cwebp` with responsive sizes (sm/lg)
+- Also converted existing book cover JPGs to WebP
+- Used `<picture>` elements with `<source>` for WebP + responsive media queries
+- Added `loading="lazy"` on all below-fold images
+- Created `styles/animations.css` with:
+  - Scroll fade-in via IntersectionObserver (`.fade-in` class)
+  - Nav hover underline animation
+  - CTA button glow on hover
+  - Book tag lift on hover
+  - Image scale on hover
+  - `prefers-reduced-motion` support
+- Added hero background image (subtle 12% opacity overlay)
+- Added full-width section divider between book and about sections
+- Replaced about section placeholder SVG with tree image
+- Added Unsplash attribution in footer
+
+**What I learned:**
+- Unsplash renders client-side, so WebFetch can't scrape photo IDs — use direct CDN URLs: `images.unsplash.com/photo-{ID}?w=WIDTH&q=QUALITY&auto=format`
+- `cwebp -q 65 -resize WIDTH 0` (height 0 = auto) produces good quality WebP under 200KB for most photos
+- Forest/tree photos compress poorly in WebP compared to sky/field photos — may need lower resolution to hit size targets
+- IntersectionObserver with threshold 0.15 gives a nice reveal timing
+
+**Mistakes made:**
+- Several Unsplash photo IDs were wrong (404s) — had to try multiple IDs and visually verify each download
+- Initial hero bg was 308KB at q75/1600w — reduced to 1200w at q65 to get under 200KB
+
+**Codebase facts discovered:**
+- New file: `styles/animations.css` — scroll and hover animations
+- New images: hero-bg, golden-field, tree, seedlings (each in .webp + -sm.webp)
+- Book cover now has WebP variants alongside original JPGs
