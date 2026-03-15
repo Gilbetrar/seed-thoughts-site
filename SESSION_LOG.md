@@ -122,3 +122,29 @@
 - New file: `styles/animations.css` — scroll and hover animations
 - New images: hero-bg, golden-field, tree, seedlings (each in .webp + -sm.webp)
 - Book cover now has WebP variants alongside original JPGs
+
+---
+
+## Agent Session - Issue #5
+
+**Worked on:** Issue #5 - Joan Review — Send Preview Email
+
+**What I did:**
+- Found existing full-page screenshots (desktop 1200px + mobile 375px) from a previous Playwright session
+- Moved screenshots to `review/desktop.png` and `review/mobile.png`
+- Drafted complete review email in HANDOFF.md with Gmail MCP parameters
+- Committed screenshots, pushed to main, CI passed
+- Added `needs-human` label to issue #5
+- HANDOFF.md is gitignored (stays local for interactive session pickup)
+
+**What I learned:**
+- HANDOFF.md and SIGNAL.txt are already in .gitignore — they're local-only coordination files
+- Playwright MCP can't launch when Chrome is already running ("Opening in existing browser session" error)
+- Previous agent sessions may leave useful artifacts (screenshots in this case) that can be reused
+
+**Mistakes made:**
+- Tried two Playwright MCP providers, both failed due to existing Chrome process. Worked around by using pre-existing screenshots.
+
+**Codebase facts discovered:**
+- `review/` directory now contains desktop.png and mobile.png for Joan's preview
+- .gitignore excludes HANDOFF.md and SIGNAL.txt by design
