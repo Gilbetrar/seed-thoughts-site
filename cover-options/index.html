@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Ideas — Seed Thoughts & Synchronicity</title>
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/page.css">
+    <style>
+        .ideas { padding: var(--space-12) 0 var(--space-20); }
+        .ideas__intro { max-width: var(--max-width-text); margin: 0 auto var(--space-12); text-align: center; }
+        .ideas__intro h1 { font-size: var(--text-4xl); margin-bottom: var(--space-4); }
+        .ideas__intro p { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+        .ideas__how { background: var(--color-white); border: 1px solid rgba(139, 123, 158, 0.25); border-radius: var(--border-radius); padding: var(--space-6) var(--space-8); font-size: var(--text-lg); text-align: left; margin-top: var(--space-8); }
+        .ideas__how strong { color: var(--color-amber); }
+        .ideas__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-12) var(--space-8); }
+        .idea { margin: 0; text-align: center; }
+        .idea a { display: block; }
+        .idea img { width: 100%; max-width: 380px; height: auto; margin: 0 auto; box-shadow: 0 10px 30px rgba(58, 46, 42, 0.22); border-radius: 3px; transition: transform var(--transition-speed); }
+        .idea a:hover img, .idea a:focus img { transform: translateY(-4px); }
+        .idea__label { display: inline-block; margin-top: var(--space-5); font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 600; color: var(--color-earth); }
+        .idea__label span { display: inline-block; min-width: 2.2em; padding: 0 var(--space-3); margin-right: var(--space-3); background: var(--color-gold); color: var(--color-white); border-radius: var(--border-radius); font-family: var(--font-body); font-size: var(--text-xl); font-weight: 600; letter-spacing: 0.05em; vertical-align: middle; line-height: 1.7; }
+        .idea__note { font-size: var(--text-base); color: var(--color-text-light); max-width: 34ch; margin: var(--space-2) auto 0; }
+        .idea--current { background: rgba(255,255,255,0.6); border: 1px dashed var(--color-mauve); border-radius: var(--border-radius); padding: var(--space-6) var(--space-4); }
+        .idea--current .idea__label span { background: var(--color-mauve); }
+        .ideas__foot { text-align: center; margin-top: var(--space-16); font-size: var(--text-lg); }
+        .ideas__foot a { color: var(--color-link); }
+        @media (max-width: 600px) { .ideas__intro h1 { font-size: var(--text-3xl); } .idea__label { font-size: var(--text-2xl); } }
+    </style>
+</head>
+<body>
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="container">
+            <a href="../" class="site-nav__title">Seed Thoughts &amp; Synchronicity</a>
+            <ul class="site-nav__links">
+                <li><a href="../">Back to the website</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="ideas">
+        <div class="container">
+            <div class="ideas__intro">
+                <h1>Cover Ideas for Joan</h1>
+                <div class="decorative-line"></div>
+                <p>Here are eight ideas for a new cover, all made with your title, subtitle, and name. None of them is finished &mdash; think of them as sketches. Any color, picture, or lettering can be changed, and it is easy to make more from a new idea of yours.</p>
+                <div class="ideas__how">
+                    <strong>How to choose:</strong> look through the covers below, then reply to Ben&rsquo;s email with the <strong>number</strong> of the one or two you like best. You can also say what you like about one and dislike about another &mdash; that helps even more. Click any cover to see it larger.
+                </div>
+            </div>
+
+            <div class="ideas__grid">
+                <figure class="idea idea--current">
+                    <a href="../images/book-cover.jpg"><img src="../images/covers/current.jpg" alt="Your current cover: a painted scene with a lone figure on a golden path" width="900" height="1165" loading="eager"></a>
+                    <figcaption><span class="idea__label"><span>Now</span>Your current cover</span><p class="idea__note">Here for comparison. If you love the painting, we can keep it and simply redo the lettering.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-1-full.jpg"><img src="../images/covers/option-1.jpg" alt="Option 1: a woman walking a sunlit golden road toward a rising sun between violet hills" width="900" height="1342" loading="eager"></a>
+                    <figcaption><span class="idea__label"><span>1</span>The Golden Path</span><p class="idea__note">Your original idea, painted fresh: a walker on a sunlit road toward the rising sun.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-2-full.jpg"><img src="../images/covers/option-2.jpg" alt="Option 2: a figure at the edge of a still lake at dusk with the sun reflected in the water" width="900" height="1342" loading="lazy"></a>
+                    <figcaption><span class="idea__label"><span>2</span>Still Water</span><p class="idea__note">A figure at the water&rsquo;s edge at dusk, the sun laying a golden line across the lake.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-3-full.jpg"><img src="../images/covers/option-3.jpg" alt="Option 3: a watercolor seedling sprouting from a glowing golden seed on cream paper" width="900" height="1342" loading="lazy"></a>
+                    <figcaption><span class="idea__label"><span>3</span>Seed of Light</span><p class="idea__note">A single seedling from a glowing seed. Quiet, simple, lots of open space.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-4-full.jpg"><img src="../images/covers/option-4.jpg" alt="Option 4: a dandelion releasing seeds into a gold and lavender sky" width="900" height="1342" loading="lazy"></a>
+                    <figcaption><span class="idea__label"><span>4</span>Dandelion</span><p class="idea__note">Seeds lifting into a gold-and-lavender sky.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-5-full.jpg"><img src="../images/covers/option-5.jpg" alt="Option 5: a great old tree in a golden meadow at sunset" width="900" height="1342" loading="lazy"></a>
+                    <figcaption><span class="idea__label"><span>5</span>The Old Tree</span><p class="idea__note">A great tree in a golden meadow, a nod to your sycamore.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-6-full.jpg"><img src="../images/covers/option-6.jpg" alt="Option 6: a golden seed on dark plum water sending out ripples" width="900" height="1342" loading="lazy"></a>
+                    <figcaption><span class="idea__label"><span>6</span>Ripples</span><p class="idea__note">A golden seed touching still, deep-plum water. The one dark option.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-7-full.jpg"><img src="../images/covers/option-7.jpg" alt="Option 7: a golden spiral of tiny seeds and leaves on cream linen" width="900" height="1342" loading="lazy"></a>
+                    <figcaption><span class="idea__label"><span>7</span>Spiral of Seeds</span><p class="idea__note">A gold spiral of seeds and leaves on cream linen. Classic and bookish.</p></figcaption>
+                </figure>
+                <figure class="idea">
+                    <a href="../images/covers/option-8-full.jpg"><img src="../images/covers/option-8.jpg" alt="Option 8: a sprout in a terracotta pot on a farmhouse windowsill at dawn" width="900" height="1342" loading="lazy"></a>
+                    <figcaption><span class="idea__label"><span>8</span>Farmhouse Window</span><p class="idea__note">A sprout on an old windowsill in morning light.</p></figcaption>
+                </figure>
+            </div>
+
+            <p class="ideas__foot">Don&rsquo;t see quite the right thing? Tell Ben what you picture &mdash; a scene, a feeling, a color &mdash; and he can have new ideas made in a day or two.<br><a href="../">Back to the website</a></p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Joan Woods Jackson. Website by Ben Bateman.</p>
+    </footer>
+</body>
+</html>
