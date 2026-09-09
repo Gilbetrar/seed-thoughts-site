@@ -431,6 +431,19 @@
   color: #F2C4B3;
 }
 
+.contact__fallback {
+  font-size: var(--text-base);
+  color: rgba(245, 240, 232, 0.7);
+  text-align: center;
+  margin: var(--space-2) 0 0;
+}
+
+.contact__email--inline {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  margin-top: 0;
+}
+
 /* --- Footer --- */
 .site-footer {
   background-color: var(--color-earth);
