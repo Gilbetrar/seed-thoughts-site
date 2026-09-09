@@ -150,23 +150,7 @@
                 <h2>Get in Touch</h2>
                 <div class="decorative-line"></div>
                 <p>Joan would love to hear from you &mdash; whether you have a question about the book, want to share your own Seed Thought creations, stories, poetry, or pictures, or simply want to say hello.</p>
-                <form class="contact__form" id="contact-form">
-                    <div class="contact__field">
-                        <label for="contact-name">Your name</label>
-                        <input id="contact-name" type="text" name="name" autocomplete="name">
-                    </div>
-                    <div class="contact__field">
-                        <label for="contact-email">Your email address</label>
-                        <input id="contact-email" type="email" name="email" autocomplete="email">
-                    </div>
-                    <div class="contact__field">
-                        <label for="contact-message">Your message</label>
-                        <textarea id="contact-message" name="message" rows="6"></textarea>
-                    </div>
-                    <button type="submit" class="contact__submit">Send Message</button>
-                    <p class="contact__status" role="status" aria-live="polite"></p>
-                    <p class="contact__fallback">Pressing Send opens your email program with the message ready to go. If nothing happens, you can write to Joan directly at <a class="contact__email contact__email--inline js-joan-email" href="#">(email address loads here)</a>.</p>
-                </form>
+                <a href="mailto:jacksonjo@aol.com" class="contact__email">jacksonjo@aol.com</a>
             </div>
         </section>
     </main>
@@ -176,40 +160,6 @@
         <p>&copy; 2026 Joan Woods Jackson. Website by Ben Bateman.</p>
         <p class="site-footer__credits">Photos by <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
     </footer>
-
-    <!-- Contact form: composes an email in the visitor's own mail program (no server involved) -->
-    <script>
-    (function() {
-        // Joan's address is assembled here rather than written in the page, so
-        // address-harvesting bots don't pick it up.
-        var joan = ['jacksonjo', 'aol.com'].join('@');
-        document.querySelectorAll('.js-joan-email').forEach(function(a) {
-            a.href = 'mailto:' + joan;
-            a.textContent = joan;
-        });
-        var form = document.getElementById('contact-form');
-        if (!form) { return; }
-        var status = form.querySelector('.contact__status');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var name = form.elements.name.value.trim();
-            var email = form.elements.email.value.trim();
-            var message = form.elements.message.value.trim();
-            if (!name || !email || !message || email.indexOf('@') < 1) {
-                status.textContent = 'Please fill in your name, email address, and message.';
-                status.className = 'contact__status contact__status--error';
-                return;
-            }
-            var subject = 'A note from your website, from ' + name;
-            var body = 'Hello Joan,\n\n' + message + '\n\n' + name + '\n' + email + '\n';
-            status.textContent = 'Opening your email program\u2026';
-            status.className = 'contact__status contact__status--ok';
-            window.location.href = 'mailto:' + joan +
-                '?subject=' + encodeURIComponent(subject) +
-                '&body=' + encodeURIComponent(body);
-        });
-    })();
-    </script>
 
     <!-- Scroll animations -->
     <script>
