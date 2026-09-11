@@ -58,7 +58,8 @@ images/*.webp           — WebP versions of all images (responsive -sm variants
 - Animations use IntersectionObserver with `.fade-in` class; `prefers-reduced-motion` respected
 
 ## Gotchas
-- CNAME file must exist for custom domain; GitHub Pages needs it
+- CNAME file is IGNORED for Actions-based deploys (build_type=workflow); the custom domain must be set in repo Settings > Pages (or `gh api repos/Gilbetrar/seed-thoughts-site/pages -X PUT -f cname=...`). The file is kept only as documentation.
+- Deploy stages only index.html, cover-options/, images/, styles/ into _site/ — internal notes are never published (2026-09-11)
 - The deploy workflow uses actions/deploy-pages@v4 which requires Pages to be enabled in repo settings (Settings > Pages > Source: GitHub Actions)
 - Pages was enabled via API: `gh api repos/Gilbetrar/seed-thoughts-site/pages -X POST -f build_type=workflow`
 - Deployed site URL: https://gilbetrar.github.io/seed-thoughts-site/
